@@ -1,0 +1,47 @@
+// main: ../style.less
+@import (reference) "../vars.less";
+
+.form__group {
+  margin-bottom: 1.8rem;
+}
+
+.form__label {
+  display: inline-block;
+  margin-bottom: 0.8rem;
+  margin-left: 1.8rem;
+
+  font-size: 0.8rem;
+  color: @black;
+  font-weight: 700;
+}
+
+.form__input,
+.form__textarea {
+  display: block;
+  width: 100%;
+
+  padding: 1.2rem 1.8rem;
+  border: 1px solid rgba(#707070, 30%);
+  border-radius: 1.8rem;
+
+  font-family: inherit;
+  font-size: 1rem;
+  line-height: 1.2;
+  font-weight: 300;
+  color: @black;
+
+  &:focus {
+    outline: 0;
+    border-color: #3d9cc1;
+  }
+
+  &::placeholder {
+    color: @gray-light;
+  }
+}
+
+.form__textarea {
+  height: 200px;
+  resize: none;
+  padding: 20px;
+}

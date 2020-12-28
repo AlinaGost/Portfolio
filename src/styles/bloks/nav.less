@@ -1,0 +1,88 @@
+// main: ../style.less
+@import (reference) "../vars.less";
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+
+  align-items: center;
+  height: 100%;
+
+  @media @mobile {
+    width: 100%;
+    height: auto;
+
+    padding: 1rem;
+
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    z-index: 1000;
+
+    background: #fff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3 );
+    text-align: center;
+
+    &.show {
+      display: flex;
+    }
+  }
+}
+
+.nav__link {
+  margin: 2rem;
+  position: relative;
+
+  font-size: 0.93rem;
+  color: @black;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  &:after {
+    content: "";
+    width: 0;
+    height: 2px;
+    background-color: @black;
+
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    z-index: 1;
+
+    transition: width 0.2s linear;
+  }
+
+  /* Modificators */
+
+  &--btn {
+    padding: 0.55rem 2rem;
+
+    border: 2px solid @black;
+    border-radius: 20px;
+
+    transition: background-color .2s linear, color .2s linear;
+
+    &:hover {
+      background-color: @black;
+      color: @white;
+    }
+  }
+
+  &:hover:not(.nav__link--btn) {
+    &:after {
+      width: 100%;
+    }
+  }
+
+  @media @tablet {
+    margin: 1rem;
+  }
+
+  @media @mobile {
+    width: 100%;
+    padding: 0.3rem 1rem;
+  }
+}
+

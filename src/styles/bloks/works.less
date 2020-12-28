@@ -1,0 +1,27 @@
+// main: ../style.less
+@import (reference) "../vars.less";
+
+.works {
+  margin: 2.8rem 0;
+}
+
+.works__nav {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.2rem;
+}
+
+.works__nav-link {
+  margin: 0 1.5rem;
+
+  font-size: 0.8rem;
+  color: rgba(@black, 70%);
+  font-weight: 400;
+  text-decoration: none;
+
+  transition: font-size .2s linear;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

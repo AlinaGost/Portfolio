@@ -1,0 +1,151 @@
+// main: ../style.less
+@import (reference) "../vars.less";
+
+.modal-works {
+  display: flex;
+
+
+  @media @tablet {
+    flex-wrap: wrap;
+  }
+}
+
+.modal-works__preview {
+  width: 65%;
+  position: relative;
+
+  overflow: hidden;
+
+  @media @tablet {
+    width: 100%;
+    height: 600px;
+    order: 2;
+  }
+}
+
+.modal-works__photo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+
+  transform: translate3d(-50%, -50%, 0);
+}
+
+.modal-works__content {
+  width: 35%;
+  padding: 3.4rem 6.6rem 1rem 1.73rem;
+
+  position: relative;
+
+  @media @tablet {
+    width: 100%;
+    order: 1;
+    padding: 3rem 3rem 1rem 1rem;
+  }
+
+  @media @mobile {
+    text-align: center;
+  }
+}
+
+.modal-works__header {
+  margin-bottom: 2rem;
+}
+
+.modal-works__title {
+  font-size: 2.1rem;
+  color: #2b2a2c;
+  line-height: 3rem;
+  font-weight: 700;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+
+  @media @mobile {
+    font-size: 1.5rem;
+  }
+}
+
+.modal-works__info-divider {
+  margin: 0 1rem;
+}
+
+.modal-works__info {
+  font-size: 1.2rem;
+  color: @gray;
+  text-transform: uppercase;
+
+  @media @mobile {
+    font-size: 0.8rem;
+  }
+}
+
+.modal-works__client {
+  margin-bottom: 2.2rem;
+
+  @media @mobile {
+    margin-bottom: 1rem;
+  }
+}
+
+.modal-works__client-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: @black;
+
+  margin-bottom: 0.2rem;
+}
+
+.modal-works__client-company {
+  font-size: 0.94rem;
+  color: @gray;
+  font-weight: 400;
+  font-family: "Montserrat", sans-serif;
+  font-style: italic;
+}
+
+.modal-works__text {
+  margin-bottom: 8rem;
+
+  font-size: 0.8rem;
+  color: @gray;
+  font-weight: 300;
+  line-height: 2rem;
+
+  @media @tablet {
+    margin-bottom: 3rem;
+    p {
+      margin-left: 0;
+    }
+  }
+}
+
+.modal-works__footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+
+  padding: 0 1.8rem 1rem;
+
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.modal-works__btn {
+  font-size: 0.94rem;
+  color: @black;
+  text-transform: uppercase;
+  font-family: inherit;
+
+  cursor: pointer;
+
+  border: 0;
+  background: none;
+  padding: 0;
+
+  &:focus {
+    outline: 0;
+  }
+}

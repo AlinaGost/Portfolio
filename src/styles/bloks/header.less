@@ -1,0 +1,37 @@
+// main: ../style.less
+
+.header {
+  padding: 1.2rem 0;
+  position: relative;
+}
+
+.header.fixed {
+  background-color: #fff;
+  padding: 5px 0;
+
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 100;
+
+  transform: translate3d(0,0,0);
+
+  .nav__link {
+    margin: 0.7rem 2rem;
+  }
+
+  @media @tablet {
+    .nav__link {
+      margin: 0.7rem 1rem;
+    }
+  }
+}
+
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

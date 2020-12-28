@@ -1,0 +1,80 @@
+// main: ../style.less
+@import (reference) "../vars.less";
+
+.intro {
+  @media @mobile {
+    margin-top: 30px;
+  }
+}
+.intro__inner {
+  display: flex;
+  padding-top: 100px;
+  padding-bottom: 120px;
+  position: relative;
+
+  border-bottom: 1px solid rgba(@gray, 30%);
+
+  @media @tablet {
+    padding-top: 45px;
+    padding-bottom: 45px;
+  }
+}
+
+.intro__content {
+  width: 50%;
+
+  @media @mobile {
+    width: 60%;
+  }
+
+  @media @mobile-sm {
+    width: 100%;
+  }
+}
+
+.intro__subtitle{
+  font-size: 2.13rem;
+  color: @black;
+  font-weight: 200;
+
+  @media @tablet {
+    font-size: 1.5rem;
+  }
+}
+
+.intro__title {
+  margin-bottom: 5px;
+  font-size: 3rem;
+  color: @black;
+  font-weight: 700;
+
+  @media @tablet {
+    font-size: 2.5rem;
+  }
+}
+
+.intro__text {
+  margin-bottom: 25px;
+  font-size: 1.2rem;
+  color: rgba(@black, 70%) ;
+  font-weight: 400;
+}
+
+.intro__photo {
+  position: absolute;
+  bottom: -1px;
+  right: 0;
+  z-index: 1;
+
+  @media @tablet {
+    width: 350px;
+  }
+
+  @media @mobile {
+    width: 290px;
+  }
+
+  @media @mobile-sm {
+    display: none;
+  }
+}
